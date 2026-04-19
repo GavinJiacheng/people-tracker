@@ -98,9 +98,12 @@ docker build -t yolo-strongsort-app .
 
 ```bash
 docker run --rm --gpus all -v "${PWD}:/data" yolo-strongsort-app python -m app.main --input /data/INPUT_FILE.mp4 --output /data/OUTPUT_FILE.mp4
-
 ```
+For example, if your video file `MOT16-08-raw.mp4` is in the current directory, you can run:
 
+```bash
+docker run --rm --gpus all -v "${PWD}:/data" yolo-strongsort-app python -m app.main --input /data/MOT16-08-raw.mp4 --output /data/output.mp4
+```
 ---
 
 ## 📌 Parameter Explanation
